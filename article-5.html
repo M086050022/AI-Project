@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大語言模型：從「文字接龍」開始的故事 - 全球AI跨域智庫</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Noto Sans TC', sans-serif; 
+            background-color: #f8fafc; 
+            color: #334155; 
+        }
+        .article-card {
+            background: white;
+            border-top: 4px solid #1e293b; 
+        }
+        .article-content p {
+            line-height: 2;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            font-size: 1.125rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            border-left: 4px solid #f59e0b; /* 金色邊條區分小標 */
+            padding-left: 1rem;
+        }
+        .evolution-list {
+            background-color: #f1f5f9;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        .evolution-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .evolution-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-[#0f172a] text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center font-bold text-amber-400 hover:text-amber-300 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                返回智庫首頁
+            </a>
+            <span class="text-sm text-slate-400 hidden sm:block">AI教育與學習</span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <div class="article-card shadow-xl rounded-b-2xl overflow-hidden">
+            
+            <header class="p-8 md:p-12 bg-white">
+                <div class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded mb-4 uppercase tracking-wider">
+                    AI 基礎原理 / 專題報導
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-6 leading-tight">
+                    大語言模型：從「文字接龍」開始的故事
+                </h1>
+                <p class="text-slate-500 italic text-sm">本文旨在為非技術背景讀者提供生成式 AI 運作邏輯的通識導讀。</p>
+            </header>
+
+            <div class="p-8 md:p-12 bg-white pt-0">
+                <article class="article-content border-t pt-8 text-slate-700">
+                    <p>你是否曾觀察過手機輸入法的「預測字詞」功能？當使用者輸入「今天天氣」，它就自動跳出「真好」、「不錯」「會下雨」等候選詞讓人選擇。這個看似簡單的功能，其實與當今能為你寫詩、寫程式、跟你聊天的大語言模型（例如最熱門的 AI 服務 ChatGPT ）有著深刻的血緣關係。</p>
+
+                    <h2>核心引擎：更強的「文字接龍」機器</h2>
+                    <p>眾所週知，電腦就是擅長重複枯燥的加減乘除上千萬次的計算機。現在可以想像電腦要扮演一個極度專注的遊戲玩家，他只擅長、也只玩一種遊戲：「文字接龍」。規則很簡單，你給他一句話的前半段，他必須猜出下一個最有可能出現的字。</p>
+                    <p>例如，你說：「燃燒自己，照亮…」他可能會回傳下一個詞：「別人」。這就是語言模型（Language Model, LM）最核心、最根本的運作機制——預測下一個詞（Next Token Prediction）。</p>
+                    <p>剛開始的語言模型就像一個記憶力超群、精通統計學的接龍玩家。它閱讀了人類有史以來幾乎所有的（已數位化的）文字資料，包含書籍、維基百科、新聞、網頁等等。透過分析這些巨量資料，它學會了什麼詞語經常一起出現。「燃燒自己」後面接「照亮別人」的機率，遠比接「照亮桌子」高得多。</p>
+                    <p>所以，當你問 AI 一個問題，例如：「臺灣最高的山是？」，它內部的運作機制其實是這樣開始連連看：</p>
+                    <p>接收到「臺灣」、「最」、「高」、「的」、「山」、「是」這幾個詞（這些初步分析後拆解出來的詞，也就是 token。Token 是 AI 處理文字的最小單位，在中文裡通常是一個字或詞的一部分，就像樂高積木一樣，但不完全等於「語詞」）。開始它的接龍遊戲：「『臺灣最高的山是』…下一個最可能的字是什麼？」</p>
+                    <p>根據它讀過的無數資料，它計算出「玉」這個字出現的機率最高。接著，問題變成：「臺灣最高的山是玉…」，下一個字呢？它再次計算，發現「山」的機率最高。這個過程不斷重複，最終組合出「臺灣最高的山是玉山。」這個完整的句子。</p>
+                    <p>所有你看似智慧的對話、文章生成、程式碼撰寫，其底層都是這個樸素到令人難以置信的「猜下一個字」的遊戲。</p>
+                    <p>但在這裡，我們必須停下來思考一個風險。有時候語言模型接錯詞的結果，有時候稱為「幻覺」（Hallucinations） ：AI 是根據「機率」來接龍，而不是根據「事實」。 如果訓練資料包含有大量錯誤資訊，或者根本缺乏資料、但為了讓句子讀起來通順，AI 很有可能會「一本正經地胡說八道」。例如，它可能會自信地告訴你一段從未發生過的歷史。這種現象被稱為「AI 幻覺」。這是使用大語言模型時，人們必須具備的關鍵識讀觀念。</p>
+
+                    <h2>從初出廬到震驚世界：GPT 的演化史</h2>
+                    <div class="evolution-list">
+                        <div class="evolution-item">
+                            <h3 class="font-bold text-[#0f172a] mb-2 text-lg">GPT-1 (2018)</h3>
+                            <p class="text-sm leading-relaxed mb-0">這是個初試啼聲的版本。它就像一個讀了很多書、但還不太會應用的高中生。它證明了透過大量未經標註的文本進行「預訓練」，然後在特定任務上進行「微調」是可行的。</p>
+                        </div>
+                        <div class="evolution-item">
+                            <h3 class="font-bold text-[#0f172a] mb-2 text-lg">GPT-2 (2019)</h3>
+                            <p class="text-sm leading-relaxed mb-0">一個巨大的飛躍。如果 GPT-1 是高中生，GPT-2 就是大學生了。人們發現它不需要太多「微調」就能表現出色（Zero-shot 學習）。它生成的段落已經相當流暢，甚至讓 OpenAI 一開始不敢釋出完整模型，擔心被濫用。</p>
+                        </div>
+                        <div class="evolution-item">
+                            <h3 class="font-bold text-[#0f172a] mb-2 text-lg">GPT-3 (2020)</h3>
+                            <p class="text-sm leading-relaxed mb-0">劃時代的里程碑，規模提升了一個量級。GPT-3 寫出的文章在一些情況下達到了與人類難以分辨的程度。這時，一個重要的現象開始被科學家們廣泛討論：「突現」。</p>
+                        </div>
+                    </div>
+                    <p>當然，故事並沒有這麼簡單。原始的 GPT-3 雖然很會寫文章，但它很難控制。為了讓它變成好用的「助理」，科學家引入了「人類回饋強化學習（RLHF）」的技術。經過這道手續，「接龍機器」才真正變成了我們熟悉的 ChatGPT。</p>
+
+                    <h2>智慧的火花：「突現」（Emergence）</h2>
+                    <p>在物理學中，「突現」指的是一個系統由許多簡單的個體組成，但當這些個體的數量或互動方式達到某個門檻時，整個系統會突然湧現出個體本身完全不具備的、全新的複雜特性。只會接龍的語言模型，在規模成長到某一程度後，也發生了「突現」。</p>
+                    <p>當模型規模跨越某個巨大的門檻（例如 GPT-3 以後），一些從未被明確教導過的能力突然「冒」了出來：</p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-700">
+                        <li><strong>算術能力：</strong> 沒有人專門教 AI 做加減乘除，但它更可能「猜」出下一個詞是正確的解答。</li>
+                        <li><strong>程式碼生成：</strong> 雖然它不懂程式邏輯，但它學會了程式語言的「文法」，能接龍出可以運行的程式。</li>
+                        <li><strong>邏輯推理：</strong> 給它邏輯謎題，它竟然能一步步分析並給出正確答案。</li>
+                        <li><strong>多語言翻譯：</strong> 它彷彿領悟了一種更底層的、共通的「意義表示」。</li>
+                    </ul>
+                    <p>這些「突現」出來的能力，是量變引起質變的典型例子。它不再只是一個模仿語言模式的機器，而是開始展現出某種程度的「理解」和「推理」能力，儘管這種「理解」和我們人類的認知方式可能完全不同。</p>
+
+                    <h2>結論：從文字接龍到未知的智慧</h2>
+                    <p>從手機輸入法的預測字詞，到能與我們對話的 ChatGPT，這是一趟驚人的發展。這個「突現」涉及當前 AI 研究的幾個核心議題：包括 Transformer 架構、擴展定律（Scaling Laws）、機制可解釋性與 AI 對齊（Alignment）。</p>
+                    <p>簡單回顧大語言模型的起點，在接下來的幾篇文章裡，我們將陸續從國家安全、教育學習、產業經濟、社會文化與精神健康多種角度，討論 AI 時代的各種議題。</p>
+                </article>
+            </div>
+        </div>
+
+        <footer class="mt-12 mb-8 text-center text-slate-500 text-sm">
+            <p class="font-bold">國立中山大學社會科學院 全球 AI 跨域智庫計畫</p>
+            <p class="mt-1 opacity-60 uppercase tracking-widest">Global AI Cross-Disciplinary Think Tank</p>
+        </footer>
+    </main>
+
+</body>
+</html>
