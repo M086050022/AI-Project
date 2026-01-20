@@ -7,13 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
-  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      box-sizing: border-box;
-    }
-    
+    body { box-sizing: border-box; }
     :root {
       --color-deep-navy: #0a1628;
       --color-electric-blue: #3b82f6;
@@ -21,492 +17,195 @@
       --color-soft-white: #f8fafc;
       --color-muted-slate: #64748b;
     }
-    
-    .font-display {
-      font-family: 'Playfair Display', 'Noto Sans TC', serif;
-    }
-    
-    .font-body {
-      font-family: 'Noto Sans TC', sans-serif;
-    }
-    
+    .font-display { font-family: 'Playfair Display', 'Noto Sans TC', serif; }
+    .font-body { font-family: 'Noto Sans TC', sans-serif; }
     .gradient-mesh {
       background: 
         radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
         radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
     }
-    
-    .card-hover {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
-    }
-    
-    .text-gradient {
-      background: linear-gradient(135deg, #3b82f6 0%, #f59e0b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .animate-float {
-      animation: float 6s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    .animate-pulse-slow {
-      animation: pulse-slow 4s ease-in-out infinite;
-    }
-    
-    @keyframes pulse-slow {
-      0%, 100% { opacity: 0.6; }
-      50% { opacity: 1; }
-    }
-    
-    .line-clamp-3 {
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    
-    .scroll-smooth {
-      scroll-behavior: smooth;
-    }
-    
-    .nav-link {
-      position: relative;
-    }
-    
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #3b82f6, #f59e0b);
-      transition: width 0.3s ease;
-    }
-    
-    .nav-link:hover::after {
-      width: 100%;
-    }
-    
-    .subproject-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
-      backdrop-filter: blur(10px);
-    }
-    
-    .hero-pattern {
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+    .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25); }
+    .text-gradient { background: linear-gradient(135deg, #3b82f6 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #3b82f6, #f59e0b); transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    .hero-pattern { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full font-body bg-slate-50 text-slate-800 overflow-auto scroll-smooth">
-  <div id="app-wrapper" class="w-full h-full"><!-- Navigation -->
+  <div id="app-wrapper" class="w-full h-full">
    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="flex items-center justify-between h-16">
       <div class="flex items-center gap-3">
        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-amber-500 flex items-center justify-center">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-        </svg>
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
        </div><span class="font-semibold text-slate-800 hidden sm:block">AI跨域智庫</span>
       </div>
-      <div class="hidden md:flex items-center gap-8"><a href="#about" class="nav-link text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">計畫介紹</a> <a href="#subprojects" class="nav-link text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">子計畫</a> <a href="#articles" class="nav-link text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">文章分享</a>
-      </div><button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors">
-       <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-       </svg></button>
-     </div>
-    </div><!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
-     <div class="px-4 py-3 space-y-2"><a href="#about" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 rounded-lg">計畫介紹</a> <a href="#subprojects" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 rounded-lg">子計畫</a> <a href="#articles" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 rounded-lg">文章分享</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">計畫介紹</a> 
+        <a href="#subprojects" class="nav-link text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">子計畫</a> 
+        <a href="#articles" class="nav-link text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">文章分享</a>
+      </div>
      </div>
     </div>
-   </nav><!-- Hero Section -->
-   <section class="relative min-h-screen flex items-center justify-center gradient-mesh hero-pattern overflow-hidden pt-16"><!-- Floating Elements -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-     <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
-     <div class="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
-     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-500/5 to-amber-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
-    </div><!-- Neural Network SVG Background -->
-    <svg class="absolute inset-0 w-full h-full opacity-[0.03]" viewbox="0 0 800 600" preserveaspectratio="xMidYMid slice"><g stroke="#3b82f6" stroke-width="1" fill="none">
-      <circle cx="100" cy="100" r="8" />
-      <circle cx="200" cy="150" r="8" />
-      <circle cx="150" cy="250" r="8" />
-      <circle cx="300" cy="100" r="8" />
-      <circle cx="400" cy="200" r="8" />
-      <circle cx="350" cy="300" r="8" />
-      <circle cx="500" cy="150" r="8" />
-      <circle cx="600" cy="100" r="8" />
-      <circle cx="550" cy="250" r="8" />
-      <circle cx="700" cy="200" r="8" />
-      <circle cx="650" cy="350" r="8" />
-      <circle cx="750" cy="300" r="8" />
-      <circle cx="200" cy="400" r="8" />
-      <circle cx="400" cy="450" r="8" />
-      <circle cx="600" cy="400" r="8" />
-      <line x1="100" y1="100" x2="200" y2="150" />
-      <line x1="200" y1="150" x2="150" y2="250" />
-      <line x1="200" y1="150" x2="300" y2="100" />
-      <line x1="300" y1="100" x2="400" y2="200" />
-      <line x1="400" y1="200" x2="350" y2="300" />
-      <line x1="400" y1="200" x2="500" y2="150" />
-      <line x1="500" y1="150" x2="600" y2="100" />
-      <line x1="600" y1="100" x2="550" y2="250" />
-      <line x1="550" y1="250" x2="700" y2="200" />
-      <line x1="700" y1="200" x2="650" y2="350" />
-      <line x1="650" y1="350" x2="750" y2="300" />
-      <line x1="150" y1="250" x2="200" y2="400" />
-      <line x1="350" y1="300" x2="400" y2="450" />
-      <line x1="550" y1="250" x2="600" y2="400" />
-     </g>
-    </svg>
+   </nav>
+
+   <section class="relative min-h-screen flex items-center justify-center gradient-mesh hero-pattern overflow-hidden pt-16">
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-     <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200/50 mb-8"><span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> <span class="text-sm font-medium text-slate-600">教育部高教深耕計畫支持</span>
+     <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200/50 mb-8">
+      <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> 
+      <span class="text-sm font-medium text-slate-600">教育部高教深耕計畫支持</span>
      </div>
-     <h1 id="hero-title" class="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">全球<span class="text-gradient">AI</span>跨域智庫計畫</h1>
-     <p id="hero-subtitle" class="text-xl sm:text-2xl text-slate-600 mb-4 font-light">國立中山大學社會科學院</p>
+     <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">全球<span class="text-gradient">AI</span>跨域智庫計畫</h1>
+     <p class="text-xl sm:text-2xl text-slate-600 mb-4 font-light">國立中山大學社會科學院</p>
      <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10">從社會科學視角出發，回應人工智慧帶來的多元挑戰與機會</p>
-     <div class="flex flex-col sm:flex-row items-center justify-center gap-4"><a href="#about" class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 flex items-center gap-2"> 了解更多 
-       <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-       </svg></a> <a href="#articles" class="px-8 py-4 bg-white text-slate-700 font-semibold rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-300"> 瀏覽文章 </a>
-     </div>
-    </div><!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-     <div class="w-6 h-10 border-2 border-slate-300 rounded-full flex justify-center">
-      <div class="w-1.5 h-3 bg-slate-400 rounded-full mt-2 animate-bounce"></div>
+     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+       <a href="#about" class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/40 transition-all duration-300 flex items-center gap-2"> 了解更多 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a> 
+       <a href="#articles" class="px-8 py-4 bg-white text-slate-700 font-semibold rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-300"> 瀏覽文章 </a>
      </div>
     </div>
-   </section><!-- About Section -->
+   </section>
+
    <section id="about" class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="grid lg:grid-cols-2 gap-16 items-center">
       <div><span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-sm font-semibold rounded-full mb-6">計畫介紹</span>
        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-6">跨領域整合的<br><span class="text-gradient">AI 研究智庫</span></h2>
        <div class="space-y-4 text-slate-600 leading-relaxed">
-        <p>本計畫由國立中山大學社會科學院領銜，集結院內多個系所的專業力量，跨領域整合形成「全球AI跨域智庫計畫」。</p>
-        <p>本智庫旨在回應人工智慧快速發展所帶來的多元挑戰與機會，從社會科學的視角出發，提供具前瞻性與實證基礎的研究洞見與政策建議。</p>
-        <p>透過本跨域智庫的運作，中山大學社會科學院致力於促進AI科技與人文社會的對話與合作，為台灣乃至全球AI發展提供多元視角與具建設性的策略建議。</p>
+        <p>本計畫由國立中山大學社會科學院領銜，集結院內多個系所的專業力量，跨領域整合形成「全球AI跨域智庫計畫」。旨在提供具前瞻性與實證基礎的研究洞見與政策建議。</p>
        </div>
       </div>
       <div class="relative">
        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-amber-500/20 rounded-3xl blur-2xl"></div>
        <div class="relative bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
         <div class="grid grid-cols-2 gap-6">
-         <div class="text-center p-6 bg-slate-50 rounded-2xl">
-          <div class="text-4xl font-bold text-gradient mb-2">
-           5
-          </div>
-          <div class="text-sm text-slate-600">
-           子計畫
-          </div>
-         </div>
-         <div class="text-center p-6 bg-slate-50 rounded-2xl">
-          <div class="text-4xl font-bold text-gradient mb-2">
-           跨域
-          </div>
-          <div class="text-sm text-slate-600">
-           整合研究
-          </div>
-         </div>
-         <div class="text-center p-6 bg-slate-50 rounded-2xl">
-          <div class="text-4xl font-bold text-gradient mb-2">
-           多元
-          </div>
-          <div class="text-sm text-slate-600">
-           系所合作
-          </div>
-         </div>
-         <div class="text-center p-6 bg-slate-50 rounded-2xl">
-          <div class="text-4xl font-bold text-gradient mb-2">
-           全球
-          </div>
-          <div class="text-sm text-slate-600">
-           視野格局
-          </div>
-         </div>
+         <div class="text-center p-6 bg-slate-50 rounded-2xl"><div class="text-4xl font-bold text-gradient mb-2">5</div><div class="text-sm text-slate-600">子計畫</div></div>
+         <div class="text-center p-6 bg-slate-50 rounded-2xl"><div class="text-4xl font-bold text-gradient mb-2">跨域</div><div class="text-sm text-slate-600">整合研究</div></div>
         </div>
        </div>
       </div>
      </div>
     </div>
-   </section><!-- Subprojects Section -->
-   <section id="subprojects" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+   </section>
+
+   <section id="subprojects" class="py-24 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="text-center mb-16"><span class="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 text-sm font-semibold rounded-full mb-6">五大子計畫</span>
       <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4">聚焦 AI 與社會的<span class="text-gradient">交會影響</span></h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">從國家安全到精神健康，全方位探討人工智慧對社會各層面的深遠影響</p>
      </div>
-     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Subproject 1 -->
-      <div class="subproject-card card-hover rounded-2xl p-8 border border-slate-200/50">
-       <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-red-500/20">
-        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-       </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white card-hover rounded-2xl p-8 border border-slate-200/50">
        <h3 class="text-xl font-bold text-slate-900 mb-3">AI 與國家安全</h3>
-       <p class="text-slate-600 leading-relaxed">探討人工智慧於國防、資安與國際戰略中的應用與風險。</p>
-      </div><!-- Subproject 2 -->
-      <div class="subproject-card card-hover rounded-2xl p-8 border border-slate-200/50">
-       <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
-        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-       </div>
+       <p class="text-slate-600 text-sm">探討人工智慧於國防、資安與國際戰略中的應用與風險。</p>
+      </div>
+      <div class="bg-white card-hover rounded-2xl p-8 border border-slate-200/50">
        <h3 class="text-xl font-bold text-slate-900 mb-3">AI 與教育學習</h3>
-       <p class="text-slate-600 leading-relaxed">研究AI在教育場域中的應用、學習模式轉變與教育公平問題。</p>
-      </div><!-- Subproject 3 -->
-      <div class="subproject-card card-hover rounded-2xl p-8 border border-slate-200/50">
-       <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20">
-        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-       </div>
+       <p class="text-slate-600 text-sm">研究AI在教育場域中的應用、學習模式轉變與教育公平問題。</p>
+      </div>
+      <div class="bg-white card-hover rounded-2xl p-8 border border-slate-200/50">
        <h3 class="text-xl font-bold text-slate-900 mb-3">AI 與產業經濟</h3>
-       <p class="text-slate-600 leading-relaxed">分析AI對產業結構、勞動市場與經濟發展的深遠影響。</p>
-      </div><!-- Subproject 4 -->
-      <div class="subproject-card card-hover rounded-2xl p-8 border border-slate-200/50">
-       <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-violet-500/20">
-        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-       </div>
-       <h3 class="text-xl font-bold text-slate-900 mb-3">AI 與社會關係</h3>
-       <p class="text-slate-600 leading-relaxed">關注AI對社會關係、文化再造與價值觀轉變的影響。</p>
-      </div><!-- Subproject 5 -->
-      <div class="subproject-card card-hover rounded-2xl p-8 border border-slate-200/50">
-       <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20">
-        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
-       </div>
-       <h3 class="text-xl font-bold text-slate-900 mb-3">AI 與精神健康</h3>
-       <p class="text-slate-600 leading-relaxed">探討AI在心理健康、輔助治療及數位關懷中的潛力與倫理挑戰。</p>
+       <p class="text-slate-600 text-sm">分析AI對產業結構、勞動市場與經濟發展的深遠影響。</p>
       </div>
      </div>
     </div>
-   </section><!-- Articles Section -->
+   </section>
+
    <section id="articles" class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-16"><span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-sm font-semibold rounded-full mb-6">文章分享</span>
+     <div class="text-center mb-12">
+      <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-sm font-semibold rounded-full mb-6">文章分享</span>
       <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4">最新<span class="text-gradient">研究洞見</span></h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">深入淺出的專業文章，帶您了解AI發展的最新趨勢與影響</p>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">即使文章再多，我們也為您梳理出最重要的核心內容</p>
      </div>
-     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Article 1 -->
-      <article class="group card-hover bg-white rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm">
-       <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-         <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><defs>
-           <pattern id="grid1" width="10" height="10" patternunits="userSpaceOnUse">
-            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" />
-           </pattern>
-          </defs> <rect width="100" height="100" fill="url(#grid1)" />
-         </svg>
-        </div>
-        <div class="absolute bottom-4 left-4"><span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">AI 與教育學習</span>
-        </div>
+
+     <div class="grid lg:grid-cols-3 gap-10">
+      
+      <div class="lg:col-span-2 space-y-8">
+       <div class="grid md:grid-cols-2 gap-8">
+        <article class="group card-hover bg-white rounded-3xl overflow-hidden border border-slate-200/60 shadow-sm flex flex-col">
+         <div class="h-48 bg-gradient-to-br from-amber-400 to-orange-500 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-20 hero-pattern"></div>
+          <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase rounded-lg tracking-wider">基礎科普</span></div>
+         </div>
+         <div class="p-6 flex-grow flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Token：AI 的「積木」與你的荷包</h3>
+          <p class="text-slate-500 text-sm line-clamp-2 mb-4">深入解析 Token 運作機制，了解 AI 服務的計價方式。</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
+           <span class="text-xs font-medium text-slate-400">2024.11.20</span>
+           <a href="article-6.html" class="text-blue-600 font-bold text-sm inline-flex items-center gap-1 group/btn">閱讀全文 <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+          </div>
+         </div>
+        </article>
+        <article class="group card-hover bg-white rounded-3xl overflow-hidden border border-slate-200/60 shadow-sm flex flex-col">
+         <div class="h-48 bg-gradient-to-br from-red-500 to-rose-700 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-20 hero-pattern"></div>
+          <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase rounded-lg tracking-wider">地緣政治</span></div>
+         </div>
+         <div class="p-6 flex-grow flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">算力即國力：AI 冷戰下的中美權力政治</h3>
+          <p class="text-slate-500 text-sm line-clamp-2 mb-4">分析 AI 技術競爭如何重塑國際權力格局。</p>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
+           <span class="text-xs font-medium text-slate-400">2024.10.15</span>
+           <a href="article-3.html" class="text-blue-600 font-bold text-sm inline-flex items-center gap-1 group/btn">閱讀全文 <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+          </div>
+         </div>
+        </article>
        </div>
-       <div class="p-6">
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">當訪談資料都上傳雲端</h3>
-        <p class="text-xs text-slate-500 mb-3">陳美華（國立中山大學社會系特聘教授兼社科院長）</p>
-        <p class="text-slate-600 text-sm line-clamp-3 mb-4">探討研究資料數位化與雲端儲存的趨勢，以及對質性研究方法的影響與挑戰。</p><a href="article-1.html" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-600 text-sm font-medium"> <span>閱讀更多</span>
-         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-         </svg></a>
-       </div>
-      </article><!-- Article 2 -->
-      <article class="group card-hover bg-white rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm">
-       <div class="h-48 bg-gradient-to-br from-emerald-500 to-teal-600 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-         <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><circle cx="20" cy="20" r="15" fill="none" stroke="white" stroke-width="0.5" /> <circle cx="50" cy="50" r="25" fill="none" stroke="white" stroke-width="0.5" /> <circle cx="80" cy="30" r="20" fill="none" stroke="white" stroke-width="0.5" /> <circle cx="70" cy="80" r="15" fill="none" stroke="white" stroke-width="0.5" />
-         </svg>
-        </div>
-        <div class="absolute bottom-4 left-4"><span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">AI 與教育學習</span>
-        </div>
-       </div>
-       <div class="p-6">
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Token：AI 的「積木」與你的荷包</h3>
-        <p class="text-xs text-slate-500 mb-3">作者待補</p>
-        <p class="text-slate-600 text-sm line-clamp-3 mb-4">深入解析Token運作機制，了解AI服務的計價方式與成本考量。</p><a href="article-6.html" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-600 text-sm font-medium"> <span>閱讀更多</span>
-         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-         </svg></a>
-       </div>
-      </article><!-- Article 3 -->
-      <article class="group card-hover bg-white rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm">
-       <div class="h-48 bg-gradient-to-br from-violet-500 to-purple-600 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-         <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><path d="M0,50 Q25,30 50,50 T100,50" fill="none" stroke="white" stroke-width="1" /> <path d="M0,60 Q25,40 50,60 T100,60" fill="none" stroke="white" stroke-width="1" /> <path d="M0,70 Q25,50 50,70 T100,70" fill="none" stroke="white" stroke-width="1" />
-         </svg>
-        </div>
-        <div class="absolute bottom-4 left-4"><span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">AI 與教育學習</span>
-        </div>
-       </div>
-       <div class="p-6">
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">AI 教育的機會與挑戰</h3>
-        <p class="text-xs text-slate-500 mb-3">陳菁儀（國立中山大學社會科學院教育研究所教授）</p>
-        <p class="text-slate-600 text-sm line-clamp-3 mb-4">分析AI融入教育體系的機會與潛在挑戰，探討教育公平與數位落差議題。</p><a href="article-2.html" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-600 text-sm font-medium"> <span>閱讀更多</span>
-         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-         </svg></a>
-       </div>
-      </article><!-- Article 4 -->
-      <article class="group card-hover bg-white rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm">
-       <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-         <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><rect x="10" y="10" width="20" height="80" fill="none" stroke="white" stroke-width="0.5" /> <rect x="40" y="30" width="20" height="60" fill="none" stroke="white" stroke-width="0.5" /> <rect x="70" y="20" width="20" height="70" fill="none" stroke="white" stroke-width="0.5" />
-         </svg>
-        </div>
-        <div class="absolute bottom-4 left-4"><span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">AI 與教育學習</span>
+      </div>
+
+      <div class="lg:col-span-1">
+       <div class="bg-slate-50/50 rounded-3xl p-6 border border-slate-100 h-full">
+        <h4 class="font-bold text-slate-800 mb-6 flex items-center gap-2">更多研究文章</h4>
+        <div class="space-y-4">
+         <a href="article-1.html" class="block group p-4 bg-white rounded-2xl border border-transparent hover:border-blue-200 hover:shadow-md transition-all">
+          <span class="text-[10px] font-bold text-blue-500 uppercase">學術評論</span>
+          <h5 class="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors mt-1">當訪談資料都上傳雲端</h5>
+         </a>
+         <a href="article-2.html" class="block group p-4 bg-white rounded-2xl border border-transparent hover:border-blue-200 hover:shadow-md transition-all">
+          <span class="text-[10px] font-bold text-indigo-500 uppercase">教育應用</span>
+          <h5 class="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors mt-1">AI 教育的機會與挑戰</h5>
+         </a>
+         <a href="article-4.html" class="block group p-4 bg-white rounded-2xl border border-transparent hover:border-blue-200 hover:shadow-md transition-all">
+          <span class="text-[10px] font-bold text-purple-500 uppercase">講座側記</span>
+          <h5 class="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors mt-1">揭開 AI 神秘面紗：我們何去何從？</h5>
+         </a>
         </div>
        </div>
-       <div class="p-6">
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">大語言模型：從「文字接龍」開始的故事</h3>
-        <p class="text-xs text-slate-500 mb-3">作者待補</p>
-        <p class="text-slate-600 text-sm line-clamp-3 mb-4">以淺顯易懂的方式介紹大語言模型的運作原理與發展歷程。</p><a href="article-5.html" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-600 text-sm font-medium"> <span>閱讀更多</span>
-         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-         </svg></a>
-       </div>
-      </article><!-- Article 5 -->
-      <article class="group card-hover bg-white rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm">
-       <div class="h-48 bg-gradient-to-br from-red-500 to-rose-600 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-         <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><polygon points="50,10 90,90 10,90" fill="none" stroke="white" stroke-width="0.5" /> <polygon points="50,30 75,75 25,75" fill="none" stroke="white" stroke-width="0.5" />
-         </svg>
-        </div>
-        <div class="absolute bottom-4 left-4"><span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">AI 與國家安全</span>
-        </div>
-       </div>
-       <div class="p-6">
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">算力即國力：AI 冷戰下的中美權力政治</h3>
-        <p class="text-xs text-slate-500 mb-3">劉奇峯（國立中山大學社會科學院亞太事務英語學程助理教授）</p>
-        <p class="text-slate-600 text-sm line-clamp-3 mb-4">分析AI技術競爭如何重塑國際權力格局，探討算力資源的戰略意涵。</p><a href="article-3.html" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-600 text-sm font-medium"> <span>閱讀更多</span>
-         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-         </svg></a>
-       </div>
-      </article><!-- Article 6 -->
-      <article class="group card-hover bg-white rounded-2xl overflow-hidden border border-slate-200/50 shadow-sm">
-       <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-         <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><path d="M10,50 C30,20 70,80 90,50" fill="none" stroke="white" stroke-width="1" /> <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="0.5" />
-         </svg>
-        </div>
-        <div class="absolute bottom-4 left-4"><span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">AI 與精神健康</span>
-        </div>
-       </div>
-       <div class="p-6">
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">揭開 AI 神秘的面紗：我們何去何從？</h3>
-        <p class="text-xs text-slate-500 mb-3">講者：郭宗杰（中央研究院院士）｜側記：陳美華、黃婉甄</p>
-        <p class="text-slate-600 text-sm line-clamp-3 mb-4">大師系列講座側記。探討AI對心理健康領域的影響，思考人機共存時代的精神福祉。</p><a href="article-4.html" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-600 text-sm font-medium"> <span>閱讀更多</span>
-         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-         </svg></a>
-       </div>
-      </article>
+      </div>
+
      </div>
     </div>
-   </section><!-- Footer -->
+   </section>
+
    <footer class="bg-slate-900 text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
      <div class="grid md:grid-cols-3 gap-12 mb-12">
       <div>
-       <div class="flex items-center gap-3 mb-6">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-amber-500 flex items-center justify-center">
-         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-         </svg>
-        </div><span class="font-semibold text-lg">全球AI跨域智庫</span>
-       </div>
-       <p class="text-slate-400 leading-relaxed">國立中山大學社會科學院<br>
-         從社會科學視角探索AI與人類社會的未來</p>
+       <h4 class="font-semibold text-lg mb-4">全球AI跨域智庫</h4>
+       <p class="text-slate-400 text-sm">國立中山大學社會科學院<br>從社會科學視角探索AI未來</p>
       </div>
       <div>
-       <h4 class="font-semibold text-lg mb-6">快速連結</h4>
-       <ul class="space-y-3">
-        <li><a href="#about" class="text-slate-400 hover:text-white transition-colors">計畫介紹</a></li>
-        <li><a href="#subprojects" class="text-slate-400 hover:text-white transition-colors">五大子計畫</a></li>
-        <li><a href="#articles" class="text-slate-400 hover:text-white transition-colors">文章分享</a></li>
+       <h4 class="font-semibold text-lg mb-4">快速連結</h4>
+       <ul class="text-slate-400 text-sm space-y-2">
+        <li><a href="#about" class="hover:text-white">計畫介紹</a></li>
+        <li><a href="#articles" class="hover:text-white">文章分享</a></li>
        </ul>
       </div>
       <div>
-       <h4 class="font-semibold text-lg mb-6">聯絡資訊</h4>
-       <ul class="space-y-3 text-slate-400">
-        <li class="flex items-center gap-3">
-         <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-         </svg><span>高雄市鼓山區蓮海路70號</span></li>
-        <li class="flex items-center gap-3">
-         <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-         </svg><span>social@mail.nsysu.edu.tw</span></li>
-       </ul>
+       <h4 class="font-semibold text-lg mb-4">聯絡資訊</h4>
+       <p class="text-slate-400 text-sm">高雄市鼓山區蓮海路70號</p>
       </div>
      </div>
-     <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-slate-500 text-sm text-center md:text-left">© 國立中山大學社會科學院｜全球 AI 跨域智庫計畫</p>
-      <div class="flex items-center gap-2 text-slate-500 text-sm"><span>教育部高教深耕計畫支持</span>
-       <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewbox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-       </svg>
-      </div>
+     <div class="border-t border-slate-800 pt-8 text-slate-500 text-xs">
+      © 國立中山大學社會科學院｜全球 AI 跨域智庫計畫
      </div>
     </div>
    </footer>
   </div>
-  <script>
-    // Default configuration
-    const defaultConfig = {
-      main_title: '全球AI跨域智庫計畫',
-      subtitle: '國立中山大學社會科學院'
-    };
-
-    // Current config reference
-    let config = { ...defaultConfig };
-
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when clicking a link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const href = this.getAttribute('href');
-        const target = document.querySelector(href);
-        if (target) {
-          const navHeight = document.querySelector('nav').offsetHeight;
-          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Navbar background on scroll
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        nav.classList.add('shadow-md');
-      } else {
-        nav.classList.remove('shadow-md');
-      }
-    });
-
-    // Element SDK initialization
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange: async (newConfig) => {
-          config = { ...defaultConfig, 
+ </body>
+</html>
