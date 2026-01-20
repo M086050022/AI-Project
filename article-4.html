@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>揭開AI神秘的面紗：我們何去何從？ - 全球AI跨域智庫</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Noto Sans TC', sans-serif; 
+            background-color: #f8fafc; 
+            color: #334155; 
+        }
+        .article-card {
+            background: white;
+            border-top: 4px solid #064e3b; /* 使用深綠色裝飾線，呼應「綠色學習」主題 */
+        }
+        .article-content p {
+            line-height: 2;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            font-size: 1.125rem;
+        }
+        .author-tag {
+            background: linear-gradient(to right, #064e3b, #1e293b);
+        }
+        .info-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-[#0f172a] text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center font-bold text-amber-400 hover:text-amber-300 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                返回智庫首頁
+            </a>
+            <span class="text-sm text-slate-400 hidden sm:block">AI與精神健康</span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <div class="article-card shadow-xl rounded-b-2xl overflow-hidden">
+            
+            <header class="p-8 md:p-12 bg-white">
+                <div class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded mb-4 uppercase tracking-wider">
+                    科普講座 / 綠色學習
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-4 leading-tight">
+                    郭宗杰院士《揭開AI神秘的面紗：我們何去何從？》
+                </h1>
+                
+                <div class="info-box italic text-slate-600">
+                    本文來自大師系列講座側記
+                </div>
+                
+                <div class="author-tag p-6 rounded-xl text-white shadow-md space-y-3">
+                    <div class="flex items-center">
+                        <span class="w-20 font-bold opacity-80 text-sm">講者</span>
+                        <span class="font-bold text-lg">郭宗杰院士（中央研究院院士）</span>
+                    </div>
+                    <div class="flex items-start border-t border-white/20 pt-3">
+                        <span class="w-20 font-bold opacity-80 text-sm">側記作者</span>
+                        <span class="text-sm leading-relaxed">
+                            陳美華（國立中山大學社會系特聘教授兼社科院長）、<br>
+                            黃婉甄（國立中山大學通訊工程研究所副教授）
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-8 md:p-12 bg-white pt-0">
+                <article class="article-content border-t pt-8 text-slate-700">
+                    <p>這個演講是針對非理工學門的研究者所做的科普講座，目標在於讓一般人瞭解生成式AI背後的原理。郭院士在長達一小時的演講中，從早期 AI 發展開始，繼之論及當前以深度學習為主的生成式 AI 的發展，以及人們該如何學著朝向人機協作這種強化智能的生產模式。放在全球各國傾全力追求生成式 AI 的技術開發、應用與投資的熱潮來看，郭院士的演講從一個相對中肯的視告評估了生成式AI的能與不能；同時他也強調當前以深度學習為基礎的 AI 勢必將因過於消耗能源，而無法永續。郭院士提出的解方是透過綠色學習 (Green Learning) ，強調以領域特定 (domain specific) 的小語言模型 (Small Language Model) 來取代當前的大語言模型，以便讓AI的發展具有永續性。以下簡述這場演講的主要內容。</p>
+
+                    <p>郭院士回顧了1950年代自Turing以來就希望開發出可以像人腦一樣思考的機器，但數十年來這整個研究方向看來是「走錯路了」，成就有限。2012年開始，現代化的AI開始出現。不再試圖像人腦一樣思考，而是透過大量輸入／輸出配對來進行深度學習，並根據特定輸入資訊來預測輸出。也就是一般人日常講的，餵它龐資料讓它進行深度學習。例如，在輸入非常多的貓、狗或動物的大量圖片之後，它也得以辨識或生成出貓、狗或馬的影象；但它並不需要理解這些動物在解剖學上的意涵，也沒有推理因果關係的能力。於是隨處可見AI生成的十鈔鐘短影音，只是社會意義不明。</p>
+
+                    <p>但這種深度學習也帶來非常多的關注，包括它像是個黑盒子，欠缺邏輯思維而沒有信賴性、易受對手攻擊或操控，仰賴非常高密度的神經式網路 (Neural Networks) 進行監督式學習，需要非常多的訓練資料，神經元 (Neuron) 的訓練和運算對於 GPU、電力和水力等等需求高，造成高碳足跡。</p>
+
+                    <p>高度資源動員難以環境永續的AI發展方向無疑是當前最大的挑戰。郭院士提出了綠色學習來取代深度學習；強調不要以系統為中心的途徑 (system-centric) 來做機器學習，而是以訊號中心(signal-centric)的途徑來學習。綠色學習的特徵是以輕量化機器學習模型來處理，透過有效率的提取資料特徵，降低計算複雜性（因而碳足跡也比較低），而且是具推理能力的 AI 。郭院士也引用了學者對地震監測的研究，比較使用深度學習和綠色學習所需要的碳足跡和能源消耗，結果顯示透過綠色學習一樣可以達到相同的訓練效果，但是不論是能源或碳足跡的消耗都遠低於深度學習。</p>
+
+                    <p>反之人類大腦的運作複雜很多，有非常茂密的神經叢來傳導感受、思維進而引導出一系列的肢體運作。大腦可以在有限的經驗資料中進行推理與思考。舉一反三是人類思維的特徵，而非透過大量資料的堆積。然而，即便至今，醫學對於大腦運作的理解仍然非常有限。鑑於人工智慧比較能處理相關性、善模仿，而無法推理因果關係，而人腦則有推理能力，但記憶力與計算能力較有限的問題，郭院士談及，人類智慧和人工智慧如果能協力、共作，將可以達成增強的智能 (Augmented Intelligence) 。以當前大家最關心的勞動力替代的問題來看，郭院士很務實地談到他自身的教學生涯中，花不少時間改學生的英文書寫，現在這些工作都可以交給AI。其次，AI辨識影像的能力對於資深的放射科醫師而言，可能幫不上什麼忙。但是，對於初入行的放射科新手醫師可能就大有幫助。因此，他預估AI不見得會取代醫生，但是懂得使用AI的醫生無疑將比不懂AI的醫生更具競爭力。這也使得如何透過教育，提升全民AI素養變成當前的重要挑戰。</p>
+
+                    <p>現場聽講的師生對於郭院士的演講深具啟發性，多位教師也表達了對於傾全力發展AI的代價感到疑慮，也有教師提出如何在學院中使用AI，以及學生們以生成式AI來寫作業、未來的AI落差可能會引發更多社會不公平等等問題，也喻示了生成式AI的倫理治理以及AI素養將是台灣高教的重要挑戰。</p>
+                </article>
+
+                <div class="mt-12 flex justify-center">
+                    <div class="h-1 w-24 bg-green-600 rounded-full opacity-30"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-12 mb-8 text-center text-slate-500 text-sm">
+            <p class="font-bold">國立中山大學社會科學院 全球 AI 跨域智庫計畫</p>
+            <p class="mt-1 opacity-60 uppercase tracking-widest">Global AI Cross-Disciplinary Think Tank</p>
+        </footer>
+    </main>
+
+</body>
+</html>
